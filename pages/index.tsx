@@ -1,4 +1,4 @@
-import Navbar from "../../components/NavBar"; // Correct if file is NavBar.tsx
+import Navbar from "../components/NavBar"; // Correct if file is NavBar.tsx
 
 
 export default function Home() {
