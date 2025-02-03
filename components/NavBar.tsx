@@ -11,10 +11,10 @@ const Navbar = () => {
 
                 {/* Desktop Navigation */}
                 <div className="hidden md:flex space-x-6">
-                    <Link href="/" className="text-white hover:underline">About Me</Link>
-                    <Link href="/about" className="text-white hover:underline">Achievements</Link>
-                    <Link href="/feedback" className="text-white hover:underline">Background</Link>
-                    <Link href="/school" className="text-white hover:underline">Contact</Link>
+                    <Link href="/portfolio/" className="text-white hover:underline">About Me</Link>
+                    <Link href="/portfolio/about" className="text-white hover:underline">Achievements</Link>
+                    <Link href="/portfolio/feedback" className="text-white hover:underline">Background</Link>
+                    <Link href="/portfolio/school" className="text-white hover:underline">Contact</Link>
                 </div>
 
                 {/* Mobile Menu Button */}

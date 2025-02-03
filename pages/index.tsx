@@ -1,5 +1,5 @@
 import Navbar from "../components/NavBar"; // Correct if file is NavBar.tsx
-import "../globals.css";
+
 
 export default function Home() {
     return (
