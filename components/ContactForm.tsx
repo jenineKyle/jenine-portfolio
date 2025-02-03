@@ -1,4 +1,3 @@
-import Navbar from "../components/NavBar";
 import { FaEnvelope, FaPhone } from "react-icons/fa"; // Importing icons from react-icons
 
 export default function Contact() {
