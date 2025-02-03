@@ -16,7 +16,6 @@ export default function Home() {
                 My sonography program consists of 12 months of theory and scan lab training, followed by an 8-month practicum rotation, where I will refine my technical skills and bedside manner in a clinical setting. I am in good standing with CNIH and a proud student member of Sonography Canada, ARDMS, and OARMS, staying engaged with the latest advancements in the field.
 
                 With a strong foundation in both technical expertise and compassionate care, I am excited to contribute to the healthcare industry, helping to provide accurate diagnoses and make a meaningful difference in patients' lives.
-
 </p>
             </section>
         </div>
