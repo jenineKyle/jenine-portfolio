@@ -1,105 +1,150 @@
 import Link from 'next/link';
 import { FaDownload } from 'react-icons/fa';
+import {
+    Box,
+    NavLink,
+    Paper,
+    Text,
+    Title,
+    Button,
+    Group,
+    Stack,
+    ScrollArea,
+} from '@mantine/core';
 
 const Resume: React.FC = () => {
     return (
-        <div className="h-full rounded-3xl p-6 m-20 flex items-center justify-center bg-gradient-to-br from-blue-50 to-gray-100  shadow-lg border border-gray-300">
-
+        <Group
+            align="flex-start"
+            className="bg-gradient-to-br from-blue-50 to-gray-100 rounded-3xl shadow-lg border border-gray-300"
+            style={{ width: '100%' }}
+            gap={0}
+        >
             {/* Left Navigation */}
-            <div className="w-1/3 bg-[#F9F9F9] border-r-2 p-6 sticky top-0 h-screen">
-                <nav className="flex flex-col space-y-6">
-                    <Link href="#profile" className="text-xl text-[#B95C17] hover:underline">PROFILE</Link>
-                    <Link href="#skills" className="text-xl text-[#B95C17] hover:underline">SKILLS</Link>
-                    <Link href="#education" className="text-xl text-[#B95C17] hover:underline">EDUCATION</Link>
-                    <Link href="#experience" className="text-xl text-[#B95C17] hover:underline">WORK EXPERIENCE</Link>
-                    <Link href="#volunteer" className="text-xl text-[#B95C17] hover:underline">VOLUNTEER EXPERIENCE</Link>
-                    <Link href="#certifications" className="text-xl text-[#B95C17] hover:underline">CERTIFICATIONS</Link>
-                </nav>
-            </div>
+            <Paper
+                shadow="sm"
+                radius={0}
+                p="lg"
+                withBorder
+                className="sticky top-0 h-screen bg-white"
+                style={{ width: 'fit-content' }}
+            >
+                <Stack gap="md">
+                    {[
+                        'Profile',
+                        'Skills',
+                        'Education',
+                        'Work Experience',
+                        'Volunteer Experience',
+                        'Certifications',
+                    ].map((section) => (
+                        <NavLink
+                            key={section}
+                            label={section}
+                            component={Link}
+                            href={`#${section.toLowerCase().replace(/ /g, '-')}`}
+                        />
+                    ))}
+                </Stack>
+            </Paper>
 
             {/* Right Content */}
-            <div className="bg-[#F3F4F6] w-2/3 p-6">
-                <div className="text-center">
-                    <h1 className="text-4xl font-bold text-gray-800">Jenine Gutierrez</h1>
-                    <p className="text-xl text-gray-600 mt-2">Diagnostic Medical Sonography Student</p>
-
-                    {/* Download Resume Button */}
-                    <a
-                        style={{ background: '#B95C17', fontWeight: 600, width: 'fit-content', padding: '10px 20px', borderRadius: '10px', marginLeft: 'auto' }}
-                        href="/resume.pdf"// Replace with your actual PDF file path
+            <ScrollArea
+                className="p-8 bg-gray-50 rounded-md"
+                style={{ flexGrow: 1, height: '100%' }}
+            >
+                <Box className="relative">
+                    <Title order={1} align="center">
+                        Jenine Gutierrez
+          </Title>
+                    <Text align="center" size="lg" color="dimmed">
+                        Diagnostic Medical Sonography Student
+          </Text>
+                    <Button
+                        component="a"
+                        href="/resume.pdf"
                         download="Jenine_Gutierrez_Cover_Letter.pdf"
-                        className="absolute top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow hover:bg-blue-700 transition"
+                        rightSection={<FaDownload />}
+                        className="absolute top-4 right-4"
+                        color="orange"
                     >
-                        <FaDownload style={{ marginRight: '20px' }} />
-          Download PDF
-        </a>
+                        Download PDF
+          </Button>
+                </Box>
 
-                </div>
-
-                <section id="profile" className=" pt-[80px]">
-                    <h2 className="text-2xl font-semibold text-gray-800">Profile</h2>
-                    <p className="mt-2 text-lg text-gray-700">
-                        A dedicated student working towards a diploma in General Diagnostic Medical Sonography with experience in organizing schedules, managing tasks, and collaborating with peers. Specializing in attention to detail, resulting in providing the highest standard of patient care. Looking to contribute my skills and experience to the imaging team at Yukon Hospital.
-                    </p>
-                </section>
-
-                <section id="skills" className=" pt-[80px]">
-                    <h2 className="text-2xl font-semibold text-gray-800">Skills</h2>
-                    <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
-                        <li>Navigates challenging situations with a positive attitude</li>
-                        <li>Prioritizes workflow schedule</li>
-                        <li>Absorbs new knowledge and skills actively</li>
-                        <li>Outstanding interpersonal and communication abilities</li>
-                    </ul>
-                </section>
-
-                <section id="education" className=" pt-[80px]">
-                    <h2 className="text-2xl font-semibold text-gray-800">Education</h2>
-                    <div className="mt-2">
-                        <h3 className="text-xl font-semibold text-gray-700">Canadian National Institute of Health</h3>
-                        <p className="text-lg text-gray-700">General Diagnostic Medical Sonography (May 2024 - Present)</p>
-                        <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
-                            <li>Anticipated graduation in December 2025</li>
-                            <li>Acquiring skills in infectious disease control and prevention</li>
-                            <li>Learning detailed anatomy and sonographic techniques</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section id="experience" className=" pt-[80px]">
-                    <h2 className="text-2xl font-semibold text-gray-800">Work Experience</h2>
-                    <div className="mt-2">
-                        <h3 className="text-xl font-semibold text-gray-700">Brooke Radiology, Burnaby, BC - Clerk</h3>
-                        <p className="text-lg text-gray-700">January 2023 - December 2023</p>
-                        <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
-                            <li>Ensured a seamless patient experience with check-ins and record management</li>
-                            <li>Handled insurance and billing inquiries with precision</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section id="volunteer" className=" pt-[80px]">
-                    <h2 className="text-2xl font-semibold text-gray-800">Volunteer Experience</h2>
-                    <div className="mt-2">
-                        <h3 className="text-xl font-semibold text-gray-700">Royal Columbian Hospital (70 hours)</h3>
-                        <p className="text-lg text-gray-700">March 2023 - December 2023</p>
-                        <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
-                            <li>Served as the first point of contact for patients and visitors</li>
-                            <li>Assisted patients with errands and navigation through the hospital</li>
-                        </ul>
-                    </div>
-                </section>
-
-                <section id="certifications" className=" pt-[80px]">
-                    <h2 className="text-2xl font-semibold text-gray-800">Certifications & Memberships</h2>
-                    <ul className="mt-2 text-lg text-gray-700 list-disc pl-6">
-                        <li>IPAC Modules</li>
-                        <li>Standard First Aid + BLS</li>
-                        <li>Student member of Sonography Canada, OAMRS, and ARDMS</li>
-                    </ul>
-                </section>
-            </div>
-        </div>
+                {/* Sections */}
+                {[
+                    {
+                        id: 'profile',
+                        title: 'Profile',
+                        content:
+                            'A dedicated student working towards a diploma in General Diagnostic Medical Sonography...',
+                    },
+                    {
+                        id: 'skills',
+                        title: 'Skills',
+                        content: [
+                            'Navigates challenging situations with a positive attitude',
+                            'Prioritizes workflow schedule',
+                            'Absorbs new knowledge and skills actively',
+                            'Outstanding interpersonal and communication abilities',
+                        ],
+                    },
+                    {
+                        id: 'education',
+                        title: 'Education',
+                        content: [
+                            'Canadian National Institute of Health',
+                            'General Diagnostic Medical Sonography (May 2024 - Present)',
+                            'Anticipated graduation in December 2025',
+                            'Acquiring skills in infectious disease control and prevention',
+                        ],
+                    },
+                    {
+                        id: 'work-experience',
+                        title: 'Work Experience',
+                        content: [
+                            'Brooke Radiology, Burnaby, BC - Clerk',
+                            'January 2023 - December 2023',
+                            'Ensured a seamless patient experience with check-ins and record management',
+                        ],
+                    },
+                    {
+                        id: 'volunteer-experience',
+                        title: 'Volunteer Experience',
+                        content: [
+                            'Royal Columbian Hospital (70 hours)',
+                            'March 2023 - December 2023',
+                            'Served as the first point of contact for patients and visitors',
+                        ],
+                    },
+                    {
+                        id: 'certifications',
+                        title: 'Certifications & Memberships',
+                        content: [
+                            'IPAC Modules',
+                            'Standard First Aid + BLS',
+                            'Student member of Sonography Canada, OAMRS, and ARDMS',
+                        ],
+                    },
+                ].map((section) => (
+                    <Box id={section.id} key={section.id} className="pt-10">
+                        <Title order={2}>{section.title}</Title>
+                        {Array.isArray(section.content) ? (
+                            <ul className="mt-2 list-disc pl-6 text-gray-700">
+                                {section.content.map((item, idx) => (
+                                    <li key={idx}>{item}</li>
+                                ))}
+                            </ul>
+                        ) : (
+                                <Text className="mt-2 text-lg text-gray-700">
+                                    {section.content}
+                                </Text>
+                            )}
+                    </Box>
+                ))}
+            </ScrollArea>
+        </Group>
     );
 };
 

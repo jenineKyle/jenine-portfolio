@@ -12,8 +12,13 @@ const theme = createTheme({
 function MyApp({ Component, pageProps }: AppProps) {
     return (
         <MantineProvider theme={theme} defaultColorScheme="light">
-            <Navbar />
-            <Component {...pageProps} />
+            <div>
+                <Navbar />
+                <div style={{ height: 'calc(100vh-56px)', overflowY: 'auto' }}>
+                    <Component {...pageProps} />
+                </div>
+            </div>
+
         </MantineProvider>
     );
 }
