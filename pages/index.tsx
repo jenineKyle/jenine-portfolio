@@ -4,7 +4,6 @@ import Navbar from "../components/NavBar"; // Correct if file is NavBar.tsx
 export default function Home() {
     return (
         <div>
-            <Navbar />
             <section className="p-6 text-center">
                 <h1 className="text-3xl font-bold">Hi, I’m Jenine Gutierrez!</h1>
                 <p className="text-lg mt-2">A dedicated Diagnostic Medical Sonography student at the Canadian National Institute of Health (CNIH), on track to graduate in December 2025.
