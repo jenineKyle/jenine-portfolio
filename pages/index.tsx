@@ -39,8 +39,8 @@ export default function Home() {
                         }}
                     >
                         <Title order={1} className={classes.title}>
-                            About Me
-            </Title>
+                            About Me :)
+                        </Title>
 
                         {/* Blockquote Sections */}
 
@@ -61,7 +61,7 @@ export default function Home() {
 
 
                             I, Jenine Gutierrez, am a member in good standing with the Canadian National Institute of Health, Sonography Canada, and the American Registry for Diagnostic Medical Sonography.
-                            </Blockquote>
+                        </Blockquote>
 
                     </Box>
 
