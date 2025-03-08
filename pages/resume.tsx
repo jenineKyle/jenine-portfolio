@@ -54,12 +54,12 @@ const Resume: React.FC = () => {
                 style={{ flexGrow: 1, height: '100%' }}
             >
                 <Box className="relative">
-                    <Title order={1} align="center">
+                    <Title order={1} ta="center">
                         Jenine Gutierrez
-          </Title>
-                    <Text align="center" size="lg" color="dimmed">
+                    </Title>
+                    <Text ta="center" size="lg" color="dimmed">
                         Diagnostic Medical Sonography Student
-          </Text>
+                    </Text>
                     <Button
                         component="a"
                         href="/resume.pdf"
@@ -69,7 +69,7 @@ const Resume: React.FC = () => {
                         color="orange"
                     >
                         Download PDF
-          </Button>
+                    </Button>
                 </Box>
 
                 {/* Sections */}
@@ -137,10 +137,10 @@ const Resume: React.FC = () => {
                                 ))}
                             </ul>
                         ) : (
-                                <Text className="mt-2 text-lg text-gray-700">
-                                    {section.content}
-                                </Text>
-                            )}
+                            <Text className="mt-2 text-lg text-gray-700">
+                                {section.content}
+                            </Text>
+                        )}
                     </Box>
                 ))}
             </ScrollArea>
