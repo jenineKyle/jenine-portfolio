@@ -6,15 +6,13 @@ import {
     Box,
     Text, Card, Grid, Divider
 } from '@mantine/core';
+import Image from 'next/image'
 import classes from './index.module.css';
-import { IconInfoCircle } from '@tabler/icons-react';
-import { BadgeCard } from '../components/BadgeCard'
 const placesPaths = Array.from({ length: 8 }, (_, i) => `/places/place${i + 1}.jpg`);
 
 
 
 export default function Home() {
-    const icon = <IconInfoCircle />;
 
     return (
         <div className={classes.hero}>
@@ -47,7 +45,7 @@ export default function Home() {
                         <Container size="lg" py="xl">
 
                             <Card shadow="sm" p="lg" radius="md" mb="lg">
-                                <Text className={classes.subTitle} size="lg" weight={500}>Professional Background</Text>
+                                <Text className={classes.subTitle} size="lg" fw={500}>Professional Background</Text>
                                 <Divider my="sm" />
                                 <Text>
                                     I earned my Medical Office Assistant certificate in December 2022, gaining a solid foundation in office tasks, patient care, and administrative duties.
@@ -58,7 +56,7 @@ export default function Home() {
                             </Card>
 
                             <Card shadow="sm" p="lg" radius="md" mb="lg">
-                                <Text className={classes.subTitle} size="lg" weight={500}>Volunteer Work</Text>
+                                <Text className={classes.subTitle} size="lg" fw={500}>Volunteer Work</Text>
                                 <Divider my="sm" />
                                 <Text>
                                     I dedicated my time as a volunteer at Royal Columbian Hospital, where I served as a wayfinder, assisting patients and visitors in navigating the hospital. This role not only
@@ -70,7 +68,7 @@ export default function Home() {
                             </Card>
 
                             <Card shadow="sm" p="lg" radius="md" mb="lg">
-                                <Text className={classes.subTitle} size="lg" weight={500}>Current Studies</Text>
+                                <Text className={classes.subTitle} size="lg" fw={500}>Current Studies</Text>
                                 <Divider my="sm" />
                                 <Text>
                                     I am currently pursuing my studies to become a Diagnostic Medical Sonographer at the Canadian National Institute of Health. This rigorous program consists of
@@ -81,11 +79,11 @@ export default function Home() {
                                 </Text>
                             </Card>
 
-                            <Title className={classes.title} order={2} align="center" mt="xl" mb="md">What I Enjoy the Most</Title>
+                            <Title className={classes.title} order={2} ta="center" mt="xl" mb="md">What I Enjoy the Most</Title>
                             <Grid>
-                                <Grid.Col md={6}>
+                                <Grid.Col >
                                     <Card shadow="sm" p="lg" radius="md">
-                                        <Text className={classes.subTitle} size="lg" weight={500}>Travel Adventures</Text>
+                                        <Text className={classes.subTitle} size="lg" fw={500}>Travel Adventures</Text>
                                         <Divider my="sm" />
                                         <Text>
                                             I love traveling! It has always been a way for me to explore new cultures, meet new people, and create unforgettable memories.
@@ -96,9 +94,9 @@ export default function Home() {
                                     </Card>
                                 </Grid.Col>
 
-                                <Grid.Col md={6}>
+                                <Grid.Col >
                                     <Card shadow="sm" p="lg" radius="md">
-                                        <Text className={classes.subTitle} size="lg" weight={500}>Memorable Moments</Text>
+                                        <Text className={classes.subTitle} size="lg" fw={500}>Memorable Moments</Text>
                                         <Divider my="sm" />
                                         <Text>
                                             Some of my most memorable experiences include hiking to the breathtaking summit of Diamond Head in Hawaii, where I was rewarded with an unforgettable panoramic view.
@@ -119,7 +117,7 @@ export default function Home() {
                 </Title>
                 <div className="mt-4 flex flex-wrap gap-4 justify-center">
                     {placesPaths.map((path, index) => (
-                        <img
+                        <Image
                             key={index}
                             src={path}
                             alt={`places ${index + 1}`}

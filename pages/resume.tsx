@@ -8,8 +8,7 @@ import {
     Title,
     Button,
     Group,
-    Stack,
-    ScrollArea,
+    Stack
 } from '@mantine/core';
 
 const Resume: React.FC = () => {

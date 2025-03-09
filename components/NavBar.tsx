@@ -19,7 +19,7 @@ function NavBar() {
 
     useEffect(() => {
         setActive(router.pathname)
-    }, [])
+    }, [router])
 
     const items = links.map((link) => (
         <Link

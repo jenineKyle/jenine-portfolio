@@ -1,12 +1,9 @@
 import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import {
     ActionIcon,
-    Button,
     Group,
     SimpleGrid,
     Text,
-    Textarea,
-    TextInput,
     Title,
 } from '@mantine/core';
 import { ContactIconsList } from './ContactIcons';

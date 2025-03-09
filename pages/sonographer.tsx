@@ -228,7 +228,7 @@ const Sonographer: React.FC = () => {
                         {section.images && (
                             <div className="mt-4 flex flex-wrap gap-4 justify-center">
                                 {certificatePaths.map((path, index) => (
-                                    <img
+                                    <Image
                                         key={index}
                                         src={path}
                                         alt={`Certificate ${index + 1}`}
