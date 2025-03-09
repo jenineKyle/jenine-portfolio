@@ -3,8 +3,8 @@ import { FaDownload } from "react-icons/fa";
 
 const CoverLetter: React.FC = () => {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-6">
-            <div className="max-w-1xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-12">
+            <div className="max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
                 {/* Download Button */}
                 <a
                     style={{ background: '#B95C17', fontWeight: 600, width: 'fit-content', padding: '10px 20px', borderRadius: '10px', marginLeft: 'auto' }}
@@ -13,8 +13,8 @@ const CoverLetter: React.FC = () => {
                     className="absolute top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow hover:bg-blue-700 transition"
                 >
                     <FaDownload style={{ marginRight: '10px' }} />
-          Download PDF
-        </a>
+                    Download PDF
+                </a>
 
                 {/* Header Section */}
                 <div className="text-center mb-6">
@@ -24,7 +24,7 @@ const CoverLetter: React.FC = () => {
                         (778) 847-9104 |{" "}
                         <a href="mailto:jgutierrez18@cnih.ca" className="text-blue-600 hover:underline">
                             jgutierrez18@cnih.ca
-            </a>
+                        </a>
                     </p>
                 </div>
 
@@ -46,34 +46,34 @@ const CoverLetter: React.FC = () => {
                 <div className="text-gray-700 leading-relaxed mt-4 space-y-4">
                     <p>
                         My name is <span className="font-semibold">Jenine Gutierrez</span>, and I am writing to express my interest in the full-time
-            Ultrasound Technologist position at Yukon Hospital as per your job posting on GRABJOBS.
-            With my training as a <span className="font-semibold">Diagnostic Medical Sonography student</span> and one year of experience working
-            as a Clerk, I am eager to apply my skills and passion to contribute positively to your team.
-          </p>
+                        Ultrasound Technologist position at Yukon Hospital as per your job posting on GRABJOBS.
+                        With my training as a <span className="font-semibold">Diagnostic Medical Sonography student</span> and one year of experience working
+                        as a Clerk, I am eager to apply my skills and passion to contribute positively to your team.
+                    </p>
 
                     <p>
                         In my previous role as a Clerk at <span className="font-semibold">Brooke Radiology</span>, I ensured a seamless patient experience by
-            overseeing check-ins, managing records, and resolving billing issues. This role sharpened my
-            <span className="font-semibold"> attention to detail</span> through accurate data entry, enhanced my <span className="font-semibold">adaptability</span> by handling diverse
-            patient scenarios and changing workflows, and strengthened my <span className="font-semibold">communication skills</span>
-            through clear and effective interactions with patients. These skills enabled me to work
-            independently and address patient needs efficiently.
-          </p>
+                        overseeing check-ins, managing records, and resolving billing issues. This role sharpened my
+                        <span className="font-semibold"> attention to detail</span> through accurate data entry, enhanced my <span className="font-semibold">adaptability</span> by handling diverse
+                        patient scenarios and changing workflows, and strengthened my <span className="font-semibold">communication skills</span>
+                        through clear and effective interactions with patients. These skills enabled me to work
+                        independently and address patient needs efficiently.
+                    </p>
 
                     <p>
                         I am particularly impressed by Yukon Hospital’s commitment to <span className="font-semibold">equity, fairness, cultural
-            safety, diversity, and accessibility.</span> Your focus on compassion, valuing people, and providing
-            comfort and kindness aligns deeply with my own values. Additionally, your dedication to
-            excellence through quality, safety, and continuous learning resonates with my professional
-            goals. I am eager to contribute to an organization that upholds these high standards.
-          </p>
+                            safety, diversity, and accessibility.</span> Your focus on compassion, valuing people, and providing
+                        comfort and kindness aligns deeply with my own values. Additionally, your dedication to
+                        excellence through quality, safety, and continuous learning resonates with my professional
+                        goals. I am eager to contribute to an organization that upholds these high standards.
+                    </p>
 
                     <p>
                         Given my background and dedication, I am confident that I will make a meaningful
                         contribution to your team. Enclosed is my resume for your review. Feel free to contact me at
-            <span className="font-semibold"> (778) 847-9104</span>. I look forward to discussing how my skills and experiences align with the
-            requirements of Yukon Hospital. Thank you for your time and consideration.
-          </p>
+                        <span className="font-semibold"> (778) 847-9104</span>. I look forward to discussing how my skills and experiences align with the
+                        requirements of Yukon Hospital. Thank you for your time and consideration.
+                    </p>
                 </div>
 
                 {/* Signature */}

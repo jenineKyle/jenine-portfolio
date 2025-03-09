@@ -16,18 +16,28 @@ const Resume: React.FC = () => {
     return (
         <Group
             align="flex-start"
-            className="bg-gradient-to-br from-blue-50 to-gray-100 rounded-3xl shadow-lg border border-gray-300"
-            style={{ width: '100%' }}
-            gap={0}
+            className="bg-gradient-to-br from-blue-50 to-gray-100 shadow-lg border border-gray-300"
+            style={{
+                width: '100%',
+                display: 'flex',
+                gap: '20px',
+                padding: '20px',
+            }}
         >
             {/* Left Navigation */}
             <Paper
                 shadow="sm"
-                radius={0}
+                radius="md"
                 p="lg"
                 withBorder
-                className="sticky top-0 h-screen bg-white"
-                style={{ width: 'fit-content' }}
+                className="sticky top-0 bg-white hidden lg:block"
+                style={{
+                    width: '250px',
+                    minHeight: '90vh',
+                    maxHeight: '90vh',
+                    overflowY: 'auto',
+                    borderRadius: '12px',
+                }}
             >
                 <Stack gap="md">
                     {[
@@ -43,27 +53,33 @@ const Resume: React.FC = () => {
                             label={section}
                             component={Link}
                             href={`#${section.toLowerCase().replace(/ /g, '-')}`}
+                            className="hover:bg-gray-200 rounded-md"
                         />
                     ))}
                 </Stack>
             </Paper>
 
             {/* Right Content */}
-            <ScrollArea
-                className="p-8 bg-gray-50 rounded-md"
-                style={{ flexGrow: 1, height: '100%' }}
+            <Box
+                style={{
+                    flex: 1,
+                    backgroundColor: 'white',
+                    borderRadius: '12px',
+                    padding: '24px',
+                    boxShadow: '0 2px 10px rgba(0,0,0,0.1)',
+                    overflowY: 'auto',
+                    maxHeight: '90vh',
+                }}
             >
-                <Box className="relative">
-                    <Title order={1} ta="center">
-                        Jenine Gutierrez
-                    </Title>
-                    <Text ta="center" size="lg" color="dimmed">
+                <Box className="relative text-center">
+                    <Title order={1}>Jenine Gutierrez</Title>
+                    <Text size="lg" color="dimmed">
                         Diagnostic Medical Sonography Student
                     </Text>
                     <Button
                         component="a"
                         href="/resume.pdf"
-                        download="Jenine_Gutierrez_Cover_Letter.pdf"
+                        download="Jenine_Gutierrez_Resume.pdf"
                         rightSection={<FaDownload />}
                         className="absolute top-4 right-4"
                         color="orange"
@@ -143,7 +159,7 @@ const Resume: React.FC = () => {
                         )}
                     </Box>
                 ))}
-            </ScrollArea>
+            </Box>
         </Group>
     );
 };

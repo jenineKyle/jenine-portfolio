@@ -1,44 +1,66 @@
-import { FaEnvelope, FaPhone } from "react-icons/fa"; // Importing icons from react-icons
+import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+import {
+    ActionIcon,
+    Button,
+    Group,
+    SimpleGrid,
+    Text,
+    Textarea,
+    TextInput,
+    Title,
+} from '@mantine/core';
+import { ContactIconsList } from './ContactIcons';
+import classes from './ContactForm.module.css';
 
-export default function Contact() {
+const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
+
+export function ContactForm() {
+    const icons = social.map((Icon, index) => (
+        <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
+            <Icon size={22} stroke={1.5} color='blue' />
+        </ActionIcon>
+    ));
+
     return (
-        <div className="min-h-screen bg-gray-50 p-8">
-            <div className="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-lg">
-                <h1 className="text-2xl font-bold text-center text-blue-600 mb-8">
-                    Contact Information
-                </h1>
-                <div className="space-y-2 flex items-center">
-                    {/* Name Section */}
-                    <div className="flex items-center space-x-4">
-                        {/* <span className="text-xl font-medium text-gray-700">Name:</span> */}
-                        <span className="text-xl text-gray-600">Jenine Kyle Gutierrez</span>
-                    </div>
+        <div className={classes.wrapper}>
+            <SimpleGrid p={100} cols={{ base: 1, sm: 1 }} spacing={50}>
+                <div>
+                    <Title className={classes.title}>Contact Me</Title>
+                    <Text className={classes.description} mt="sm" mb={30}>
+                        I will get back to you within 24 hours
+                    </Text>
 
-                    {/* Email Section */}
-                    <div className="flex items-center space-x-4">
-                        <FaEnvelope className="text-blue-600" />
-                        <span className="text-xl font-medium text-gray-700">Email:</span>
-                        <a
-                            href="mailto:jgutierrez18@cnih.ca"
-                            className="text-xl text-blue-600 hover:underline"
-                        >
-                            jgutierrez18@cnih.ca
-                        </a>
-                    </div>
+                    <ContactIconsList />
 
-                    {/* Phone Section */}
-                    <div className="flex items-center space-x-4">
-                        <FaPhone className="text-blue-600" />
-                        <span className="text-xl font-medium text-gray-700">Phone:</span>
-                        <a
-                            href="tel:+17788479104"
-                            className="text-xl text-blue-600 hover:underline"
-                        >
-                            778-847-9104
-                        </a>
-                    </div>
+                    <Group mt="xl" justify="center">{icons}</Group>
                 </div>
-            </div>
+                {/* <div className={classes.form}>
+                    <TextInput
+                        label="Email"
+                        placeholder="your@email.com"
+                        required
+                        classNames={{ input: classes.input, label: classes.inputLabel }}
+                    />
+                    <TextInput
+                        label="Name"
+                        placeholder="John Doe"
+                        mt="md"
+                        classNames={{ input: classes.input, label: classes.inputLabel }}
+                    />
+                    <Textarea
+                        required
+                        label="Your message"
+                        placeholder="I want to order your goods"
+                        minRows={4}
+                        mt="md"
+                        classNames={{ input: classes.input, label: classes.inputLabel }}
+                    />
+
+                    <Group justify="flex-end" mt="md">
+                        <Button className={classes.control}>Send message</Button>
+                    </Group>
+                </div> */}
+            </SimpleGrid>
         </div>
     );
 }

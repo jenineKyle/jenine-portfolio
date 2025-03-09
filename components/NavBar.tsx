@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useRouter } from 'next/router'; // Import useRouter hook
+import { useEffect, useState } from 'react';
 import { Burger, Container, Group, Text, Popover, Stack } from '@mantine/core';
 import Link from 'next/link'; // Import Next.js Link
 import classes from './HeaderMenu.module.css';
@@ -12,9 +13,13 @@ const links = [
 ];
 
 function NavBar() {
-
+    const router = useRouter(); // Access the current route
     const [active, setActive] = useState(links[0].link);
     const [opened, setOpened] = useState(false)
+
+    useEffect(() => {
+        setActive(router.pathname)
+    }, [])
 
     const items = links.map((link) => (
         <Link
@@ -34,7 +39,7 @@ function NavBar() {
     return (
         <header className={classes.header}>
             <Container size="md" className={classes.inner}>
-                <Text fz={20}>Jenine Gutierrez</Text>
+                <Text fw={700} c='#e6721a' fz={20}>Jenine Gutierrez</Text>
                 <Group gap={5} visibleFrom="xs">
                     {/* Regular navigation links for larger screens */}
                     {items}

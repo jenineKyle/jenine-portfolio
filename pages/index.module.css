@@ -1,31 +1,35 @@
 .hero {
     position: relative;
-    background-image: url('../public/place5.jpg'); /* Replace with your own image */
+    background-image: url('../public/places/place5.jpg');
+    /* Replace with your own image */
     background-size: cover;
     background-position: center;
     width: 100%;
-   height: fit-content;
+    height: fit-content;
     overflow-x: hidden;
-     overflow-y: auto;
+    overflow-y: auto;
 }
 
 .inner {
-      width: 100vw;
-      height: fit-content;
+    width: 100vw;
+    height: fit-content;
     display: flex;
     flex-direction: column;
-    justify-content: center; /* Center the content vertically */
-    align-items: center; /* Center the content horizontally */
+    justify-content: center;
+    /* Center the content vertically */
+    align-items: center;
+    /* Center the content horizontally */
     /* padding-bottom: calc(var(--mantine-spacing-xl) * 6); */
     z-index: 2;
     position: relative;
-    background-color: transparent; /* Remove any background to let overlay show */
+    background-color: transparent;
+    /* Remove any background to let overlay show */
     padding: 50px 10px;
 }
 
 .title {
     color: white !important;
-    font-size: 60px;
+    font-size: 30px;
     font-weight: 900;
     line-height: 1.1;
     text-align: center;
@@ -41,10 +45,19 @@
     }
 }
 
+.subTitle {
+    font-family:
+        Greycliff CF,
+        var(--mantine-font-family);
+    color: #b95c17;
+    line-height: 1;
+}
+
 .description {
     color: rgb(250, 250, 250) !important;
     max-width: 90%;
-    text-align: start; /* Center the text */
+    text-align: start;
+    /* Center the text */
     margin-top: 20px;
 
     @media (max-width: 600px) {
