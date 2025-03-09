@@ -1,5 +1,6 @@
 // import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import {
+    Stack,
     // ActionIcon,
     // Group,
     SimpleGrid,
@@ -21,42 +22,19 @@ export function ContactForm() {
     return (
         <div className={classes.wrapper}>
             <SimpleGrid p={100} cols={{ base: 1, sm: 1 }} spacing={50}>
+
                 <div>
-                    <Title className={classes.title}>Contact Me</Title>
-                    <Text ta='center' className={classes.description} mt="sm" mb={30}>
-                        I will get back to you within 24 hours
-                    </Text>
-
+                    <Title mb={20} className={classes.title}>Contact Me</Title>
+                    <Stack style={{ display: 'flex', justifyContent: 'center', width: '50%', margin: '10px auto' }}>
+                        <Text fw={500} ta='center' className={classes.description} mt="sm" mb={10}>
+                            Thank you for reading about my sonography career this far! I look forward to starting my journey in the field of Diagnostic Medical Sonography!
+                        </Text>
+                        <Text ta='center' className={classes.description} mb={20}>
+                            If you have any comments or questions, feel free to reach out! I look forward to hearing from you!
+                        </Text>
+                    </Stack>
                     <ContactIconsList />
-
-                    {/* <Group mt="xl" justify="center">{icons}</Group> */}
                 </div>
-                {/* <div className={classes.form}>
-                    <TextInput
-                        label="Email"
-                        placeholder="your@email.com"
-                        required
-                        classNames={{ input: classes.input, label: classes.inputLabel }}
-                    />
-                    <TextInput
-                        label="Name"
-                        placeholder="John Doe"
-                        mt="md"
-                        classNames={{ input: classes.input, label: classes.inputLabel }}
-                    />
-                    <Textarea
-                        required
-                        label="Your message"
-                        placeholder="I want to order your goods"
-                        minRows={4}
-                        mt="md"
-                        classNames={{ input: classes.input, label: classes.inputLabel }}
-                    />
-
-                    <Group justify="flex-end" mt="md">
-                        <Button className={classes.control}>Send message</Button>
-                    </Group>
-                </div> */}
             </SimpleGrid>
         </div>
     );

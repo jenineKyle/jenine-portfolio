@@ -15,7 +15,7 @@ function ContactIcon({ icon: Icon, title, description, ...others }: ContactIconP
                 <Icon size={24} color='#e6721a' />
             </Box>
 
-            <div style={{ width: '250px', marginLeft: '10px' }}>
+            <div style={{ width: '200px', marginLeft: '10px' }}>
                 <Text size="xs" className={classes.title}>
                     {title}
                 </Text>

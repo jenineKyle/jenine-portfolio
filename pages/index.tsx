@@ -9,7 +9,7 @@ import {
 import Image from 'next/image'
 import classes from './index.module.css';
 const placesPaths = Array.from({ length: 8 }, (_, i) => `/places/place${i + 1}.jpg`);
-
+const placesPathsJpeg = Array.from({ length: 11 }, (_, i) => `/places/place${i + 9}.jpeg`);
 
 
 export default function Home() {
@@ -52,6 +52,9 @@ export default function Home() {
                                     This training has equipped me with the necessary skills to efficiently manage medical office workflows, maintain patient records, and provide compassionate support.
                                     Currently, I work as a Clerk at Brooke Radiology, where I handle patient scheduling, documentation, and assist in ensuring a seamless experience for both patients and staff.
                                     These experiences have strengthened my organizational skills, improved my multitasking abilities, and reinforced my passion for delivering quality patient care.
+                                </Text>
+                                <Text mt={20}>
+                                    I, Jenine Gutierrez, am a member in good standing with the Canadian National Institute of Health, Sonography Canada, and the American Registry for Diagnostic Medical Sonography.
                                 </Text>
                             </Card>
 
@@ -115,16 +118,18 @@ export default function Home() {
                 <Title order={1} className={classes.title}>
                     Sharing some of my favorite favorite snaps
                 </Title>
-                <div className="mt-4 flex flex-wrap gap-4 justify-center">
-                    {placesPaths.map((path, index) => (
-                        <Image
-                            key={index}
-                            src={path}
-                            alt={`places ${index + 1}`}
-                            className="mt-2 w-full sm:w-1/2 md:w-1/3 lg:w-1/4 xl:w-1/5"
-                            height={400}
-                            width={450}
-                        />
+                <div
+                    className="w-screen mt-4 flex flex-wrap gap-4 justify-center px-6"
+                >
+                    {placesPaths.concat(placesPathsJpeg).map((path, index) => (
+                        <div key={index} className="relative w-full sm:w-1/2 md:w-1/3 lg:w-1/5 xl:w-1/6 h-[400px] ">
+                            <Image
+                                src={path}
+                                alt={`places ${index + 1}`}
+                                className="object-cover rounded-lg"
+                                fill
+                            />
+                        </div>
                     ))}
                 </div>
 
