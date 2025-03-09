@@ -1,7 +1,7 @@
-import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
+// import { IconBrandInstagram, IconBrandTwitter, IconBrandYoutube } from '@tabler/icons-react';
 import {
-    ActionIcon,
-    Group,
+    // ActionIcon,
+    // Group,
     SimpleGrid,
     Text,
     Title,
@@ -9,27 +9,27 @@ import {
 import { ContactIconsList } from './ContactIcons';
 import classes from './ContactForm.module.css';
 
-const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
+// const social = [IconBrandTwitter, IconBrandYoutube, IconBrandInstagram];
 
 export function ContactForm() {
-    const icons = social.map((Icon, index) => (
-        <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
-            <Icon size={22} stroke={1.5} color='blue' />
-        </ActionIcon>
-    ));
+    // const icons = social.map((Icon, index) => (
+    //     <ActionIcon key={index} size={28} className={classes.social} variant="transparent">
+    //         <Icon size={22} stroke={1.5} color='blue' />
+    //     </ActionIcon>
+    // ));
 
     return (
         <div className={classes.wrapper}>
             <SimpleGrid p={100} cols={{ base: 1, sm: 1 }} spacing={50}>
                 <div>
                     <Title className={classes.title}>Contact Me</Title>
-                    <Text className={classes.description} mt="sm" mb={30}>
+                    <Text ta='center' className={classes.description} mt="sm" mb={30}>
                         I will get back to you within 24 hours
                     </Text>
 
                     <ContactIconsList />
 
-                    <Group mt="xl" justify="center">{icons}</Group>
+                    {/* <Group mt="xl" justify="center">{icons}</Group> */}
                 </div>
                 {/* <div className={classes.form}>
                     <TextInput
