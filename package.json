@@ -2,7 +2,7 @@
   "name": "jenine-portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/jenineKyle/portfolio.git",
+  "homepage": "https://github.com/jenineKyle/jenine-portfolio.git",
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
