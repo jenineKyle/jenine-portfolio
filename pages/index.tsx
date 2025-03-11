@@ -39,7 +39,7 @@ export default function Home() {
                         </span>
                         <br />
 
-                        a Canadian National <br /> Institute Health Student.
+                        a Canadian National <br /> Institute of Health Student.
 
                     </Text>
                 </div>
@@ -69,7 +69,7 @@ export default function Home() {
                         <Container size="lg" py="xl">
 
                             <Card shadow="sm" p="lg" radius="md" mb="lg">
-                                <Text className={classes.subTitle} size="lg" fw={500}>Professional Background</Text>
+                                <Text className={classes.subTitle} size="lg" fw={500}>Work Experience</Text>
                                 <Divider my="sm" />
                                 <Text>
                                     I earned my Medical Office Assistant certificate in December 2022, which provided me with essential skills and a comprehensive understanding of how medical offices operate. This training laid a strong foundation for my career, equipping me with expertise in office tasks, patient care, and administrative duties. In my previous role as a Clerk at Brooke Radiology, I gained valuable hands-on experience in managing patient intake and ensuring seamless clinic operations. This experience increased my comfort in a clinical setting and taught me the importance of staying organized while making patients feel at ease. Through this role, I learned to balance efficiency with compassion, creating a positive and supportive environment for both patients and staff.
@@ -78,7 +78,7 @@ export default function Home() {
                             </Card>
 
                             <Card shadow="sm" p="lg" radius="md" mb="lg">
-                                <Text className={classes.subTitle} size="lg" fw={500}>Volunteer Work</Text>
+                                <Text className={classes.subTitle} size="lg" fw={500}>Volunteer Experience</Text>
                                 <Divider my="sm" />
                                 <Text>
                                     I dedicated my time as a volunteer at Royal Columbian Hospital, where I served as a wayfinder, assisting patients and visitors in navigating the hospital. This role not only
