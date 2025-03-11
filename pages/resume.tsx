@@ -112,7 +112,7 @@ const Resume: React.FC = () => {
                         id: 'profile',
                         title: 'Profile',
                         content:
-                            'A dedicated student working towards a diploma in General Diagnostic Medical Sonography...',
+                            "A dedicated student working towards a diploma in General Diagnostic Medical Sonography with experience in organizing schedules, managing tasks, and collaborating with peers. Specializing in attention to detail resulting in providing the highest standard of patient care. Looking to contribute my skills and experience to the imaging team at the Yukon Hospital.",
                     },
                     {
                         id: 'skills',
@@ -128,30 +128,76 @@ const Resume: React.FC = () => {
                         id: 'education',
                         title: 'Education',
                         content: [
-                            'Canadian National Institute of Health',
-                            'General Diagnostic Medical Sonography (May 2024 - Present)',
-                            'Anticipated graduation in December 2025',
-                            'Acquiring skills in infectious disease control and prevention',
-                        ],
+                            {
+                                label: 'Canadian National Institute of Health INC. (Accredited by Sonography Canada)',
+                                data: [
+                                    'General Diagnostic Medical Sonography | May 2024 - Present',
+                                    'Anticipated graduation in December 2025',
+                                    'Acquiring skills in infectious disease control and prevention',
+                                    'Introducing detailed anatomy across various imaging planes and modalities, focusing on normal anatomical structures',
+                                    'Learning basic sound concepts required of a sonographer such as sound properties, units, and measurements',
+                                ]
+                            },
+                            {
+                                label: 'Langara College | Medical Office Administrator | Graduated in December 2022',
+                                data: [
+                                    'Proficient in performing administrative duties in doctors\' offices, hospitals, and clinics',
+                                    'Knowledge in medical transcription and clinical procedures',
+                                ]
+                            },
+                            {
+                                label: 'Langara College | Foundations in Health Studies | Graduated in August 2022',
+                                data: [
+                                    'Introduced human structures and functions with a focus on basic physiology principles'
+                                ]
+                            }
+                        ]
                     },
                     {
                         id: 'work-experience',
                         title: 'Work Experience',
                         content: [
-                            'Brooke Radiology, Burnaby, BC - Clerk',
-                            'January 2023 - December 2023',
-                            'Ensured a seamless patient experience with check-ins and record management',
-                        ],
+                            {
+                                label: 'Brooke Radiology, Burnaby, BC | Clerk',
+                                data: [
+                                    'January 2023 - December 2023',
+                                    'Ensured a positive experience for patients undergoing imaging services by assisting with check-in, handling accurate records, and addressing billing and insurance inquiries.'
+                                ]
+                            },
+                            {
+                                label: 'Art of Sauna and Spa, Burnaby, BC | Lead Receptionist',
+                                data: [
+                                    'February 2022 - February 2023',
+                                    'Actively engaged in training new team members and collaborated with managers to implement improvements for an enhanced client experience.',
+                                    'Provided excellent customer service and fostered a welcoming atmosphere.'
+                                ]
+                            }
+                        ]
                     },
+
                     {
                         id: 'volunteer-experience',
                         title: 'Volunteer Experience',
                         content: [
-                            'Royal Columbian Hospital (70 hours)',
-                            'March 2023 - December 2023',
-                            'Served as the first point of contact for patients and visitors',
-                        ],
+                            {
+                                label: 'Royal Columbian Hospital, Burnaby, BC | Volunteer',
+                                data: [
+                                    'March 2023 - December 2023 (70 hours)',
+                                    'Served as a friendly face and often the first point of contact for patients and visitors.',
+                                    'Took on tasks such as conducting errands and escorting individuals to ensure a positive and supportive experience at the hospital.'
+                                ]
+                            },
+                            {
+                                label: 'Queen’s Park Care & Assisted Living, Burnaby, BC | Volunteer',
+                                data: [
+                                    'February 2023 - September 2023 (30 hours)',
+                                    'Prioritized the well-being of residents by adhering to safety measures.',
+                                    'Contributed to residents\' social interaction, competition, and overall enjoyment, aiming to add joy and enhance their quality of life.'
+                                ]
+                            }
+                        ]
                     },
+
                     {
                         id: 'certifications',
                         title: 'Certifications & Memberships',
@@ -165,15 +211,33 @@ const Resume: React.FC = () => {
                     <Box id={section.id} key={section.id} className="pt-10">
                         <Title order={2}>{section.title}</Title>
                         {Array.isArray(section.content) ? (
-                            <ul className="mt-2 list-disc pl-6 text-gray-700">
-                                {section.content.map((item, idx) => (
-                                    <li key={idx}>{item}</li>
-                                ))}
-                            </ul>
+                            // If it's an array, it could either be an array of strings or an array of objects
+                            section.content.every(item => typeof item === 'string') ? (
+                                // If all items are strings, render them as a list
+                                <ul className="mt-2 list-disc pl-6 text-gray-700">
+                                    {section.content.map((item, idx) => (
+                                        <li key={idx}>{item}</li>
+                                    ))}
+                                </ul>
+                            ) : (
+                                // Otherwise, render label and data for objects in the array
+                                <div className="mt-2 text-gray-700">
+                                    {section.content.map((item, idx) => (
+                                        <div key={idx} className="mt-4">
+                                            <strong>{item.label}</strong>
+                                            <div className="mt-2">
+                                                <ul className="list-disc pl-6">
+                                                    {item.data.map((dataItem, dataIdx) => (
+                                                        <li key={dataIdx}>{dataItem}</li>
+                                                    ))}
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    ))}
+                                </div>
+                            )
                         ) : (
-                            <Text className="mt-2 text-lg text-gray-700">
-                                {section.content}
-                            </Text>
+                            <Text className="mt-2 text-lg text-gray-700">{section.content}</Text>
                         )}
                     </Box>
                 ))}
