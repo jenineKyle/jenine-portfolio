@@ -10,6 +10,7 @@ import Image from 'next/image'
 import classes from './index.module.css';
 const placesPaths = Array.from({ length: 8 }, (_, i) => `/places/place${i + 1}.jpg`);
 const placesPathsJpeg = Array.from({ length: 11 }, (_, i) => `/places/place${i + 9}.jpeg`);
+import profilePhoto from '../public/jenineprofile.jpg'
 
 
 export default function Home() {
@@ -21,13 +22,36 @@ export default function Home() {
 
             <Container px={0} className={classes.inner}>
 
+                <div className="w-screen mt-4 flex flex-wrap items-center gap-6 justify-center px-6 sm:flex-col md:flex-row">
+                    <div className="relative w-[250px] h-[250px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px]">
+                        <Image
+                            src={profilePhoto}
+                            alt="Profile"
+                            className="object-cover rounded-full"
+                            fill
+
+                        />
+                    </div>
+                    <Text className="text-white text-center sm:text-center md:text-left text-2xl sm:text-lg md:text-xl lg:text-3xl xl:text-5xl font-bold p-6">
+                        Hi! I'm
+                        <span className="block inline text-[#dc9f71] font-bold sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl ">
+                            {' '} Jenine Gutierrez,
+                        </span>
+                        <br />
+
+                        a Canadian National <br /> Institute Health Student.
+
+                    </Text>
+                </div>
+
+
                 <Flex
                     // gap="md"
                     justify="flex-start"
                     align="flex-start"
                     direction="row"
                     wrap="wrap"
-                    style={{ width: '100vw' }}
+                    style={{ width: '100vw', marginTop: '70px' }}
                 >
                     {/* Left Box - About Me */}
                     <Box
