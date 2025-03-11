@@ -21,12 +21,12 @@
 }
 
 .description {
-    color: var(--mantine-color-blue-0);
-    max-width: 300px;
+    /* color: var(--mantine-color-blue-0); */
+    /* max-width: 300px; */
 
-    @media (max-width: $mantine-breakpoint-sm) {
+    /* @media (max-width: $mantine-breakpoint-sm) {
         max-width: 100%;
-    }
+    } */
 }
 
 .form {
