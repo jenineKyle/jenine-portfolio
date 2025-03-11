@@ -3,8 +3,8 @@ import { FaDownload } from "react-icons/fa";
 
 const CoverLetter: React.FC = () => {
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-12">
-            <div className="max-w-4xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
+        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+            <div className="max-w-1xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
                 {/* Download Button */}
                 <a
                     style={{ background: '#B95C17', fontWeight: 600, width: 'fit-content', padding: '10px 20px', borderRadius: '10px', marginLeft: 'auto' }}

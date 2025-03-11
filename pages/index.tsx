@@ -53,9 +53,7 @@ export default function Home() {
                                     Currently, I work as a Clerk at Brooke Radiology, where I handle patient scheduling, documentation, and assist in ensuring a seamless experience for both patients and staff.
                                     These experiences have strengthened my organizational skills, improved my multitasking abilities, and reinforced my passion for delivering quality patient care.
                                 </Text>
-                                <Text mt={20}>
-                                    I, Jenine Gutierrez, am a member in good standing with the Canadian National Institute of Health, Sonography Canada, and the American Registry for Diagnostic Medical Sonography.
-                                </Text>
+
                             </Card>
 
                             <Card shadow="sm" p="lg" radius="md" mb="lg">
@@ -79,6 +77,9 @@ export default function Home() {
                                     My goal is to earn certification with Sonography Canada and the American Registry for Diagnostic Medical Sonography, allowing me to become a registered Diagnostic Medical Sonographer.
                                     I am excited about this journey, as it allows me to merge my passion for patient care with the technical expertise required to perform diagnostic imaging, helping physicians
                                     make accurate medical assessments.
+                                </Text>
+                                <Text mt={20}>
+                                    I, Jenine Gutierrez, am a member in good standing with the Canadian National Institute of Health, Sonography Canada, and the American Registry for Diagnostic Medical Sonography.
                                 </Text>
                             </Card>
 

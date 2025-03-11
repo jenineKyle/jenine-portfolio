@@ -25,7 +25,7 @@ export function ContactForm() {
 
                 <div>
                     <Title mb={20} className={classes.title}>Contact Me</Title>
-                    <Stack style={{ display: 'flex', justifyContent: 'center', width: '50%', margin: '10px auto' }}>
+                    <Stack style={{ display: 'flex', justifyContent: 'center', margin: '10px auto' }}>
                         <Text fw={500} ta='center' className={classes.description} mt="sm" mb={10}>
                             Thank you for reading about my sonography career this far! I look forward to starting my journey in the field of Diagnostic Medical Sonography!
                         </Text>
