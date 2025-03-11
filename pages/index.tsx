@@ -22,14 +22,13 @@ export default function Home() {
 
             <Container px={0} className={classes.inner}>
 
-                <div className="w-screen mt-4 flex flex-wrap items-center gap-6 justify-center px-6 sm:flex-col md:flex-row">
+                <div className="w-screen mt-4 flex flex-wrap items-center gap-6 justify-center px-6 md:flex-row sm:flex-col">
                     <div className="relative w-[250px] h-[250px] sm:w-[200px] sm:h-[200px] md:w-[300px] md:h-[300px] lg:w-[350px] lg:h-[350px] xl:w-[400px] xl:h-[400px]">
                         <Image
                             src={profilePhoto}
                             alt="Profile"
                             className="object-cover rounded-full"
                             fill
-
                         />
                     </div>
                     <Text className="text-white text-center sm:text-center md:text-left text-2xl sm:text-lg md:text-xl lg:text-3xl xl:text-5xl font-bold p-6">
@@ -38,9 +37,7 @@ export default function Home() {
                             {' '} Jenine Gutierrez,
                         </span>
                         <br />
-
-                        A Canadian National Institute of Health <br /> Diagnostic Medical Sonography Student
-
+                        a Canadian National Institute of Health <br /> Diagnostic Medical Sonography Student
                     </Text>
                 </div>
 
