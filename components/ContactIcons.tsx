@@ -3,7 +3,7 @@ import { Box, Stack, Text } from '@mantine/core';
 import classes from './ContactIcons.module.css';
 
 interface ContactIconProps extends Omit<React.ComponentPropsWithoutRef<'div'>, 'title'> {
-    icon: typeof IconSun;
+    icon: typeof IconAt;
     title: React.ReactNode;
     description: React.ReactNode;
     href?: string;  // Add href for clickable links
