@@ -39,7 +39,7 @@ export default function Home() {
                         </span>
                         <br />
 
-                        a Canadian National <br /> Institute of Health Student.
+                        Canadian National Institute of Health <br /> Diagnostic Medical Sonography Student
 
                     </Text>
                 </div>

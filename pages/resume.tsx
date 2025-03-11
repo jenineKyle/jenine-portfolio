@@ -8,10 +8,13 @@ import {
     Title,
     Button,
     Group,
-    Stack
+    Stack,
+    Blockquote
 } from '@mantine/core';
+import { IconInfoCircle } from '@tabler/icons-react';
 
 const Resume: React.FC = () => {
+    const icon = <IconInfoCircle />;
     return (
         <Group
             align="flex-start"
@@ -20,9 +23,12 @@ const Resume: React.FC = () => {
                 width: '100%',
                 display: 'flex',
                 gap: '20px',
-                padding: '20px',
+                padding: '40px',
             }}
         >
+            <Blockquote color="orange" cite="" icon={icon} mt="xs">
+                Regarding my resume and cover letter, I decided to address Yukon Hospital for an open position. However, I have structured it in a way that allows for easy adjustments to tailor it to the specific requirements of any available role.
+            </Blockquote>
             {/* Left Navigation */}
             <Paper
                 shadow="sm"
@@ -75,12 +81,25 @@ const Resume: React.FC = () => {
                     <Text size="lg" color="dimmed">
                         Diagnostic Medical Sonography Student
                     </Text>
+
+                    {/* Small Screen: Icon Only */}
+                    <Button
+                        component="a"
+                        href="/resume.pdf"
+                        download="Jenine_Gutierrez_Resume.pdf"
+                        className="fixed bottom-10 right-12 block md:hidden"
+                        color="orange"
+                    >
+                        <FaDownload />
+                    </Button>
+
+                    {/* Large Screen: Full Text + Icon */}
                     <Button
                         component="a"
                         href="/resume.pdf"
                         download="Jenine_Gutierrez_Resume.pdf"
                         rightSection={<FaDownload />}
-                        className="absolute top-4 right-4"
+                        className="fixed bottom-10 right-12 hidden md:flex"
                         color="orange"
                     >
                         Download PDF

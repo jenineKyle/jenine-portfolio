@@ -1,18 +1,42 @@
 import React from "react";
 import { FaDownload } from "react-icons/fa";
+import { IconInfoCircle } from '@tabler/icons-react';
+import { Blockquote, Group } from '@mantine/core'
 
 const CoverLetter: React.FC = () => {
+    const icon = <IconInfoCircle />;
     return (
-        <div className="flex justify-center items-center min-h-screen bg-gray-100 p-4">
+        <Group
+            align="flex-start"
+            className="bg-gradient-to-br from-blue-50 to-gray-100 shadow-lg border border-gray-300"
+            style={{
+                width: '100%',
+                display: 'flex',
+                gap: '20px',
+                padding: '40px',
+            }}
+        >
+            <Blockquote color="orange" cite="" icon={icon} mt="xs">
+                Regarding my resume and cover letter, I decided to address Yukon Hospital for an open position. However, I have structured it in a way that allows for easy adjustments to tailor it to the specific requirements of any available role.
+            </Blockquote>
             <div className="max-w-1xl bg-white p-8 rounded-xl shadow-lg border border-gray-200 relative">
-                {/* Download Button */}
+
+                {/* Small Screen: Icon Only */}
                 <a
-                    style={{ background: '#B95C17', fontWeight: 600, width: 'fit-content', padding: '10px 20px', borderRadius: '10px', marginLeft: 'auto' }}
-                    href="/cover-letter.pdf" // Replace with your actual PDF file path
+                    href="/cover-letter.pdf"
                     download="Jenine_Gutierrez_Cover_Letter.pdf"
-                    className="absolute top-4 right-4 bg-blue-600 text-white px-4 py-2 rounded-lg flex items-center gap-2 shadow hover:bg-blue-700 transition"
+                    className="fixed bottom-10 right-12 block md:hidden bg-[#B95C17] text-white p-3 rounded-lg shadow hover:bg-[#963F0C] transition"
                 >
-                    <FaDownload style={{ marginRight: '10px' }} />
+                    <FaDownload size={20} />
+                </a>
+
+                {/* Large Screen: Full Text + Icon */}
+                <a
+                    href="/cover-letter.pdf"
+                    download="Jenine_Gutierrez_Cover_Letter.pdf"
+                    className="fixed bottom-10 right-12 hidden md:flex items-center gap-2 bg-[#B95C17] text-white px-4 py-2 rounded-lg shadow hover:bg-[#963F0C] transition font-semibold"
+                >
+                    <FaDownload size={20} />
                     Download PDF
                 </a>
 
@@ -82,7 +106,7 @@ const CoverLetter: React.FC = () => {
                     <p className="font-semibold text-gray-800">Jenine Gutierrez</p>
                 </div>
             </div>
-        </div>
+        </Group>
     );
 }
 

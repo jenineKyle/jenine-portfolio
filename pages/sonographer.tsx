@@ -24,7 +24,7 @@ const Sonographer: React.FC = () => {
                 width: '100%',
                 display: 'flex',
                 gap: '20px',
-                padding: '20px',
+                padding: '40px',
             }}
         >
             {/* Left Navigation */}
