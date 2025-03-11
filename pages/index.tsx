@@ -72,10 +72,7 @@ export default function Home() {
                                 <Text className={classes.subTitle} size="lg" fw={500}>Professional Background</Text>
                                 <Divider my="sm" />
                                 <Text>
-                                    I earned my Medical Office Assistant certificate in December 2022, gaining a solid foundation in office tasks, patient care, and administrative duties.
-                                    This training has equipped me with the necessary skills to efficiently manage medical office workflows, maintain patient records, and provide compassionate support.
-                                    Currently, I work as a Clerk at Brooke Radiology, where I handle patient scheduling, documentation, and assist in ensuring a seamless experience for both patients and staff.
-                                    These experiences have strengthened my organizational skills, improved my multitasking abilities, and reinforced my passion for delivering quality patient care.
+                                    I earned my Medical Office Assistant certificate in December 2022, which provided me with essential skills and a comprehensive understanding of how medical offices operate. This training laid a strong foundation for my career, equipping me with expertise in office tasks, patient care, and administrative duties. In my previous role as a Clerk at Brooke Radiology, I gained valuable hands-on experience in managing patient intake and ensuring seamless clinic operations. This experience increased my comfort in a clinical setting and taught me the importance of staying organized while making patients feel at ease. Through this role, I learned to balance efficiency with compassion, creating a positive and supportive environment for both patients and staff.
                                 </Text>
 
                             </Card>

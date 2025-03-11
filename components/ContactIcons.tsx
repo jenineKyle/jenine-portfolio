@@ -29,7 +29,6 @@ const MOCKDATA = [
     { title: 'Email', description: 'jgutierrez18@cnih.ca', icon: IconAt },
     { title: 'Phone', description: '+1 (778) 847-9104 ', icon: IconPhone },
     { title: 'Address', description: '312-7428 19th Avenue Burnaby British Columbia', icon: IconMapPin },
-    { title: 'Working hours', description: '8 a.m. – 5 p.m.', icon: IconSun },
 ];
 
 export function ContactIconsList() {
