@@ -31,15 +31,16 @@ export default function Home() {
                             fill
                         />
                     </div>
-                    <Text className="text-white text-center sm:text-center md:text-left text-2xl sm:text-lg md:text-xl lg:text-3xl xl:text-5xl font-bold p-6">
+                    <Text className="text-white text-center sm:text-center md:text-left text-xl sm:text-lg md:text-lg lg:text-2xl xl:text-3xl font-bold p-6">
                         Hi! I'm
-                        <span className="block inline text-[#dc9f71] font-bold sm:text-xl md:text-2xl lg:text-4xl xl:text-6xl ">
+                        <span className="block inline text-[#dc9f71] font-bold sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl ">
                             {' '} Jenine Gutierrez,
                         </span>
                         <br />
                         a Canadian National Institute of Health <br /> Diagnostic Medical Sonography Student
                     </Text>
                 </div>
+
 
 
                 <Flex
